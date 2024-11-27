@@ -14,7 +14,7 @@ import (
 
 func DBinstance() *mongo.Client {
 	if err := godotenv.Load(); err != nil {
-		log.Fatal("no .env found")
+		log.Println("no .env found")
 	}
 
 	uri := os.Getenv("URI")
